@@ -357,6 +357,7 @@
           placeholder="Search beyond the limits..."
           autocomplete="off"
           required
+          autofocus
         />
       </form>
     </div>
@@ -451,9 +452,12 @@
       /* ========================================
          SCRIPT INITIALIZATION
          ======================================== */
-      window.addEventListener("load", () =>
-        document.getElementById("searchInput").focus()
-      );
+      window.addEventListener("load", () => {
+        document.getElementById("searchInput").focus();
+        setTimeout(focusSearch, 50);
+        setTimeout(focusSearch, 250);
+        setTimeout(focusSearch, 500);
+      });
 
       /**
        * Updates the Clock and Date elements
