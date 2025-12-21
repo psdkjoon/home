@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PSDK | Start Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500&family=Vazirmatn:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500&family=Vazirmatn:wght@400;500;700&display=swap");
-
-      /* ========================================
-         CSS VARIABLES - Catppuccin Mocha Theme
-         ======================================== */
+      /*===============================
+               CSS Variables
+      ===============================*/
       :root {
         --ctp-rosewater: #f5e0dc;
         --ctp-flamingo: #f2cdcd;
@@ -70,9 +74,9 @@
         line-height: 1.8;
       }
 
-      /* ========================================
-         BLOB ANIMATIONS
-         ======================================== */
+      /*===============================
+               Blob Animations
+      ===============================*/
       .blob-container {
         position: fixed;
         top: 0;
@@ -89,6 +93,7 @@
         filter: blur(8px);
         opacity: 0.6;
         bottom: -50px;
+        will-change: transform, opacity;
       }
 
       @keyframes floatUp {
@@ -128,9 +133,9 @@
         }
       }
 
-      /* ========================================
-         CLOCK SECTION
-         ======================================== */
+      /*===============================
+                 Clock CSS
+      ===============================*/
       .clock-container {
         z-index: 10;
         margin-bottom: 2rem;
@@ -171,9 +176,9 @@
         direction: rtl;
       }
 
-      /* ========================================
-         SEARCH SECTION
-         ======================================== */
+      /*===============================
+                 Search CSS
+      ===============================*/
       .search-container {
         position: relative;
         z-index: 10;
@@ -216,9 +221,9 @@
         transform: translateY(-2px);
       }
 
-      /* ========================================
-         QUICK LINKS
-         ======================================== */
+      /*===============================
+               Quick Links
+      ===============================*/
       .links-container {
         z-index: 10;
         display: flex;
@@ -261,9 +266,9 @@
         fill: var(--ctp-text);
       }
 
-      /* ========================================
-         FOOTER
-         ======================================== */
+      /*===============================
+                 Footer CSS
+      ===============================*/
       footer {
         position: fixed;
         bottom: 0;
@@ -332,10 +337,14 @@
     </style>
   </head>
   <body>
-    <!-- ==================== BLOB CONTAINER ==================== -->
+    <!--===============================
+              Blob Container
+    ===============================-->
     <div class="blob-container" id="blobContainer"></div>
 
-    <!-- ==================== CLOCK CONTAINER ==================== -->
+    <!--===============================
+              Clock Container
+    ===============================-->
     <div class="clock-container">
       <div class="clock-time" id="clockTime">00:00</div>
       <div class="clock-date">
@@ -345,7 +354,9 @@
       </div>
     </div>
 
-    <!-- ==================== SEARCH CONTAINER ==================== -->
+    <!--===============================
+              Search Container
+    ===============================-->
     <div class="search-container">
       <form class="search-form" action="https://duckduckgo.com/" method="GET">
         <input
@@ -361,23 +372,40 @@
       </form>
     </div>
 
-    <!-- ==================== QUICK LINKS ==================== -->
+    <!--===============================
+               Quick Links
+    ===============================-->
     <div class="links-container">
-      <a href="https://github.com" class="link-item" title="GitHub">
+      <a
+        href="https://github.com"
+        class="link-item"
+        title="GitHub"
+        aria-label="GitHub"
+      >
         <svg viewBox="0 0 24 24">
           <path
             d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
           />
         </svg>
       </a>
-      <a href="https://youtube.com" class="link-item" title="YouTube">
+      <a
+        href="https://youtube.com"
+        class="link-item"
+        title="YouTube"
+        aria-label="YouTube"
+      >
         <svg viewBox="0 0 24 24">
           <path
             d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
           />
         </svg>
       </a>
-      <a href="https://reddit.com" class="link-item" title="Reddit">
+      <a
+        href="https://reddit.com"
+        class="link-item"
+        title="Reddit"
+        aria-label="Reddit"
+      >
         <svg viewBox="0 0 24 24">
           <path
             d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.949-6.971-2.046l1.483-4.669 4.016.941-.006.058c0 1.193.975 2.163 2.174 2.163 1.198 0 2.172-.97 2.172-2.163s-.975-2.164-2.172-2.164c-.92 0-1.704.574-2.021 1.379l-4.329-1.015c-.189-.046-.381.063-.44.249l-1.654 5.207c-2.838.034-5.409.798-7.3 2.025-.474-.438-1.103-.712-1.799-.712-1.465 0-2.656 1.187-2.656 2.646 0 .97.533 1.811 1.317 2.271-.052.282-.086.567-.086.857 0 3.911 4.808 7.093 10.719 7.093s10.72-3.182 10.72-7.093c0-.274-.029-.544-.075-.81.832-.447 1.405-1.312 1.405-2.318zm-17.224 1.816c0-.568.47-1.024 1.057-1.024.589 0 1.057.456 1.057 1.024 0 .568-.469 1.024-1.057 1.024-.588 0-1.057-.456-1.057-1.024zm8.804 5.575c-2.005 2.084-6.838 2.084-8.841 0-.173-.18-.173-.474 0-.654.173-.181.453-.181.626 0 1.656 1.72 5.953 1.72 7.589 0 .173-.181.454-.181.626 0 .173.18.173.474 0 .654zm.941-4.551c-.589 0-1.057-.456-1.057-1.024 0-.568.468-1.024 1.057-1.024.588 0 1.057.456 1.057 1.024 0 .568-.47 1.024-1.057 1.024z"
@@ -388,6 +416,7 @@
         href="https://to-do.live.com/"
         class="link-item"
         title="Microsoft To Do"
+        aria-label="Microsoft To Do"
       >
         <svg viewBox="0 0 24 24">
           <path
@@ -395,7 +424,12 @@
           />
         </svg>
       </a>
-      <a href="https://lmarena.ai/" class="link-item" title="LMarena">
+      <a
+        href="https://lmarena.ai/"
+        class="link-item"
+        title="LMarena"
+        aria-label="LMarena"
+      >
         <svg
           viewBox="0 0 512 512"
           xmlns="http://www.w3.org/2000/svg"
@@ -410,7 +444,12 @@
           />
         </svg>
       </a>
-      <a href="https://mail.google.com/" class="link-item" title="Gmail">
+      <a
+        href="https://mail.google.com/"
+        class="link-item"
+        title="Gmail"
+        aria-label="Gmail"
+      >
         <svg viewBox="0 0 24 24">
           <path
             d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
@@ -421,6 +460,7 @@
         href="https://aistudio.google.com/"
         class="link-item"
         title="Google AI Studio"
+        aria-label="Google AI Studio"
       >
         <svg viewBox="0 0 24 24">
           <path
@@ -430,7 +470,9 @@
       </a>
     </div>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!--===============================
+                 Footer
+    ===============================-->
     <footer>
       <div class="footer-line"></div>
       <p class="copyright">
@@ -446,33 +488,54 @@
       <div class="footer-line"></div>
     </footer>
 
-    <!-- ==================== JAVASCRIPT ==================== -->
+    <!--===============================
+               JavaScript
+    ===============================-->
     <script>
-      /* ========================================
-         SCRIPT INITIALIZATION
-         ======================================== */
       window.addEventListener("load", () => {
-        document.getElementById("searchInput").focus();
-        setTimeout(document.getElementById("searchInput").focus(), 50);
-        setTimeout(document.getElementById("searchInput").focus(), 250);
-        setTimeout(document.getElementById("searchInput").focus(), 500);
+        const input = document.getElementById("searchInput");
+        requestAnimationFrame(() => input.focus());
       });
 
-      /**
-       * Updates the Clock and Date elements
-       */
+      const searchForm = document.querySelector(".search-form");
+      const searchInput = document.getElementById("searchInput");
+
+      searchForm.addEventListener("submit", (e) => {
+        const query = searchInput.value.trim();
+
+        try {
+          const url = new URL(query);
+          e.preventDefault();
+          window.location.href = url.href;
+          return;
+        } catch (_) {}
+
+        if (
+          !query.includes(" ") &&
+          (query.includes(".") ||
+            query.startsWith("localhost") ||
+            query.includes("://"))
+        ) {
+          e.preventDefault();
+          let finalUrl = query;
+          if (!/^[a-zA-Z]+:\/\//.test(query)) {
+            finalUrl =
+              (query.startsWith("localhost") ? "http://" : "https://") + query;
+          }
+          window.location.href = finalUrl;
+        }
+      });
+
       function updateClock() {
         const now = new Date();
         const timeEl = document.getElementById("clockTime");
         const dateGregEl = document.getElementById("dateGregorian");
         const dateShamsiEl = document.getElementById("dateShamsi");
 
-        // Format time HH:MM
         const hours = String(now.getHours()).padStart(2, "0");
         const minutes = String(now.getMinutes()).padStart(2, "0");
         timeEl.textContent = `${hours}:${minutes}`;
 
-        // Format Gregorian Date
         const gregOptions = {
           weekday: "short",
           month: "short",
@@ -482,7 +545,6 @@
           .toLocaleDateString("en-US", gregOptions)
           .toUpperCase();
 
-        // Format Shamsi Date (Persian)
         const shamsiOptions = {
           weekday: "long",
           month: "long",
@@ -492,14 +554,13 @@
           "fa-IR-u-ca-persian",
           shamsiOptions,
         );
+
+        const delay = 1000 - now.getMilliseconds();
+        setTimeout(updateClock, delay);
       }
 
-      setInterval(updateClock, 1000);
       updateClock();
 
-      /* ========================================
-         BACKGROUND ANIMATION
-         ======================================== */
       const blobContainer = document.getElementById("blobContainer");
       const colors = [
         "#f5e0dc",
@@ -518,9 +579,6 @@
         "#b4befe",
       ];
 
-      /**
-       * Creates a floating blob element
-       */
       function createBlob(isInitial = false) {
         const blob = document.createElement("div");
         blob.classList.add("blob");
@@ -544,7 +602,6 @@
         return blob;
       }
 
-      // Optimized batch creation
       const fragment = document.createDocumentFragment();
       for (let i = 0; i < 40; i++) {
         fragment.appendChild(createBlob(true));
